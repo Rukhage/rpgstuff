@@ -44,6 +44,5 @@ WeaponsList["prey stalker"] = {
 	modifiers: "1, 1",
 	ammo: "arrow",
 	attunement: true,
-	
+}	
 };
-	
