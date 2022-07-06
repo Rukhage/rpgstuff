@@ -1,0 +1,49 @@
+/*	-WHAT IS THIS?-
+	This file adds optional material to "MPMB's Character Record Sheet" found at https://flapkan.com/mpmb/charsheets
+	Import this file using the "Add Extra Materials" bookmark.
+	-KEEP IN MIND-
+	It is recommended to enter the code in a fresh sheet before adding any other information (i.e. before making your character with it).
+*/
+
+/*  -INFORMATION-
+	Subject:	ToD Campaign Special Weapons List
+	Effect:		This script adds a number of weapons and equipment packs for a ToD Campaign
+				This is original content adapted from different sources (will credit authors once I figure out how to work this properly)
+				This content is made by Eugenio Curia
+	Code by:	MorePurpleMoreBetter
+	Date:		2022-04-11 (sheet v13.00.00)
+				The code will work in v12.999 but will require closing and opening the sheet before the packs are available
+	Please support the creator of this content (Jason Mendell) and download his material from DM Guild: https://www.dmsguild.com/browse.php?author=Jason%20Mendell
+	IMPORTANT: adding this script will remove a couple of alternative names for weapons (e.g. longsword will no longer trigger for anything other than just 'longsword')
+	Note that this content is not balanced well for all weapons and the official D&D 5e rules state that you are better off using the weapon stats from the PHB and switching out their names for something else (e.g. the sickle stats fit a kama)
+*/
+
+var iFileName = "Tyranny of Dragons Special Weapons.js";
+RequiredSheetVersion(13.0.8);
+
+SourceList["ToD:SWL"] = {
+	name : "Tyranny of Dragons - Special Weapons",
+	abbreviation : "ToD:SWL",
+	group : "Private Campaign",
+	date : "2022/07/06"
+};
+
+WeaponsList["prey stalker"] = {
+	regExpSearch : /^(?=.*prey)(?=.*stalker).*$/i,
+	name : "Prey Stalker",
+	source : ["ToD:SWL", 1],
+	list : "ranged",
+	ability : 3,
+	type : "Martial",
+	damage : [1, 12, "piercing"],
+	range : "150/600 ft",
+	weight : 2,
+	description : "special: Hunter's Mark does not require concentration, ammunition, heavy, two-handed",
+	special: true,
+	abilitytodamage : true,
+	modifiers: "1, 1",
+	ammo: "arrow",
+	attunement: true,
+	
+};
+	
