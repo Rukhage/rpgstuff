@@ -43,6 +43,6 @@ WeaponsList["prey stalker"] = {
 	abilitytodamage : true,
 	modifiers: "1, 1",
 	ammo: "arrow",
+	baseWeapon: "longbow",
 	attunement: true,
 }	
-};
